@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="data.js" defer></script> -->
+    <script  src="admin.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="div_logo">
+                <img src="images/logo.svg" alt="logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main_admin">
+        <div class="dashboard">
+            <div class="dashboard-header">
+                <h1>Dashboard Admin</h1>
+            </div>
+            <ul class="dashboard-menu">
+                <li class="menu-item">Statistique</li>
+                <li class="menu-item">View Cards</li>
+                <li class="menu-item ajouterQuiz">Ajouter Quiz</li>
+                <li class="menu-item ajouterQustion">Ajouter Question</li>
+            </ul>
+            <div class="dashboard-sections">
+                <!-- Contenu spécifique aux sections -->
+            </div>
+        </div>
+
+        <div class="sections_page">
+
+                <div class="quezes_admin">
+                    <div class="titleListeQuiz">
+                        <h1>Liste des Quiz Disponibles</h1>
+                    </div>
+                    <table id="quizesTable">
+                        <tr>
+                            <th>ID</th>
+                            <th>title</th>
+                            <th>categorie</th>
+                            <th>tempsEstime</th>
+                            <th>NbrQuestions:</th>
+                            <th>Niveau</th>
+                            <th>statut</th>
+                            <th>Modifier</th>
+                            <th>Supprimer</th>
+                        </tr>
+                        <!-- <tr>
+                            <td>0</td>
+                            <td>Football</td>
+                            <td>Sport</td>
+                            <td>10min</td>
+                            <td>4</td>
+                            <td>Facile</td>
+                            <td><select id="statut">
+                                <option value="inactif">inactif</option> 
+                                <option value="actif">actif</option>
+                            </select></td>
+                            <td><button class="modifier">Modifier</button></td>
+                            <td><button class="supprimer">Supprimer</button></td>
+                        </tr>                        -->
+                    </table>
+                </div>
+
+            <div class="container_ajouterQuiz">
+                <form class="quiz-form">
+                    <div class="quiz_li">
+                    </div>
+                    
+                    <!-- Section principale du quiz -->
+                    <div class="quiz-section">
+                        <h1>Ajouter un Nouveau Quiz</h1>
+                        <label for="title">Titre du Quiz</label>
+                        <input type="text" id="title" name="title">
+
+                        <label for="categorie">Catégorie</label>
+                        <input type="text" id="categorie" name="categorie">
+
+                        <label for="tempsEstime">Temps Estimé (minutes)</label>
+                        <input type="number" id="tempsEstime" name="tempsEstime" >
+
+                        <label for="niveau">Niveau de Difficulté</label>
+                        <select id="niveau" name="niveau">
+                            <option value="Facile">Facile</option>
+                            <option value="Moyenne">Moyenne</option>
+                            <option value="Difficile">Difficile</option>
+                        </select>
+                        <button type="submit" class="submit_btn_admin">Enregistrer le Quiz</button>
+                    </div>
+                    
+                    <!-- Section d'ajout de questions -->
+                    
+                    <div class="question-section">
+                        <h2>Ajouter des Questions</h2>
+                        <div class="question">
+                            <label for="quiz">selectionner le titre de quiz</label>
+                            <select id="quiz" name="selectQuiz">
+                                <option index_quiz_admin=-1>ALL</option>
+                            </select>
+                            <label for="question-type">Type de Question</label>
+                            <select id="question-type" name="question-type">
+                                <option value="#">Selectionner le type de question</option>
+                                <option value="mcq">QCM</option>
+                                <option value="boolean">Vrai/Faux</option>
+                                <option value="text">Texte</option>
+                            </select>
+
+
+                            <div class="mcq-options">
+                                <label for="question-text">Question :(type: QCM)</label>
+                                <input type="text" id="question-text" name="question-text">
+                                <label>Options (pour QCM seulement)</label>
+                                <input type="text" id="option1" placeholder="Option 1">
+                                <input type="text" id="option2" placeholder="Option 2">
+                                <input type="text" id="option3" placeholder="Option 3">
+                                <input type="text" id="option4" placeholder="Option 4">
+
+                                <label for="correct-index">Indice de la Réponse Correcte</label>
+                                <input type="number" id="correct-index" name="correct-index" min="0" max="3">
+                                <label for="explication">Explication </label>
+                                <textarea id="explication" name="explication"></textarea>
+                                <button type="submit" class="add-question ajouter_questionQcm">Ajouter la Question</button>
+                            </div>
+
+                            <div class="boolean-options">
+                                <label for="question-text">Question :(type:boolean)</label>
+                                <input type="text" id="question-text" name="question-text">
+                                <div class="div_optionVraiFaux">
+                                    <input type="radio" id="true" name="correctAnswer" value="0">
+                                    <label for="true">Vrai</label>
+                                    <input type="radio" id="false" name="correctAnswer" value="1">
+                                    <label for="false">Faux</label>
+                                </div>
+                                <label for="correct-index">Indice de la Réponse Correcte</label>
+                                <input type="number" id="correct-index" name="correct-index" min="0" max="1">
+                                <label for="explication">Explication</label>
+                                <textarea id="explication" name="explication"></textarea>
+                                <button type="submit" class="add-question ajouter_questionVF">Ajouter la Question</button>
+                            </div>
+
+                            <div class="text-options">
+                                <label for="question-text">Question :(type:text)</label>
+                                <input type="text" id="question-text" name="question-text">
+                                <label>Réponses</label>
+                                <input type="text" id="option1" placeholder="Réponse01">
+                                <input type="text" id="option2" placeholder="Réponse02">
+                                <label for="explication">Explication</label>
+                                <textarea id="explication" name="explication"></textarea>
+                                <button type="submit" class="add-question ajouter_questionText">Ajouter la Question</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

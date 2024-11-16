@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="div_logo">
+                <img src="images/logo.svg" alt="logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <section class="quiz-info-bar">
+            <div class="score">Score : <span id="score">0</span></div>
+            <div class="timer">Temps restant : <span id="time"></span></div>
+            <div class="question-progress">Question <span id="question-number">1</span>/<strong>10</strong></div>
+        </section>
+
+        <section class="section_barDeProgression">
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+                
+            </div>
+        </section>
+
+        <section class="question_area multiple-choice">
+            <h2>Quelle est la capitale de la France ?</h2>
+            <div class="options">
+                <button>A. Londres</button>
+                <button>B. Paris</button>
+                <button>C. Rome</button>
+                <button>D. Madrid</button>
+            </div>
+        </section>
+
+        <section class="question_area vf-question">
+            <h2>La Tour Eiffel est située à Paris ?</h2>
+            <div class="options">
+                <!-- <button>Vrai</button>
+                <button>Faux</button> -->
+            </div>
+        </section>
+
+        <section class="question_area input-question">
+            <h2>Quel est le plus grand océan du monde ?</h2>
+            <input type="text" placeholder="Tapez votre réponse ici..." class="answer-input">
+            <button class="submit-answer">Valider</button>
+        </section>
+
+        <section class="details_quiz_utilisateur">
+            <div class="titre_details_user">
+                <h1>Détails de votre Quiz</h1>
+            </div>
+            
+            
+            <div class="container_questions_correctes">
+                <h2>"Questions correctes"</h2>
+                <!-- <div class="reponses_correctes">
+                </div> -->
+                <!-- <h3>explication : .......</h3> -->
+            </div>
+            
+            <div class="container_questions_incorrectes">
+                <h2>"Questions incorrectes"</h2>
+                <!-- <div class="reponses_incorrectes">
+                </div> -->
+                <!-- <h3>explication : .......</h3> -->
+            </div>
+            <div class="affichage_score">
+                <h2>Votre score est : <span></span></h2>
+            </div>
+            <div class="affichage_temps">
+                <h2>Votre temps est : <span></span></h2>
+            </div>
+            <div class="affichage_pourcentage">
+                <h2>Pourcentage de réussite : <span></span></h2>
+            </div>
+            <div class="btns_repeterquiz_nouveauQuiz">
+                <button class="btnrepeatQuiz">Essayer une autre fois</button>
+                <button class="btnNouveauQuiz">Un nouveau quiz</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
