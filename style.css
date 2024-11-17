@@ -411,7 +411,7 @@ img {
 }
 
 tr td #statut {
-    width: 120px;
+    /* width: 120px; */
     padding: 8px;
     border: 2px solid #FF7D29; 
     border-radius: 5px;
@@ -571,6 +571,62 @@ tr td #statut option[value="actif"] {
     font-weight: 700;
 }
 
+@media screen and (max-width:1340px){
+    .quezes_admin th, .quezes_admin td {
+        padding: 8px;
+        font-size: 13px;
+    }
+    tr td #statut {
+        padding: 6px;
+        font-size: 13px;
+    }
+    .quezes_admin td button {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+   .main_admin {
+       display: flex;
+       gap: 8%;
+    }
+    .dashboard h1 {
+        font-size: 18px;
+    }
+    .dashboard ul li {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .dashboard {
+        width: 15%;
+    }
+    nav ul li {
+        font-size: 18px;
+    }
+    .titleListeQuiz h1{
+        font-size: 22px;
+    }
+    .quezes_admin th, .quezes_admin td {
+        padding: 6px;
+        font-size: 10px;
+    }
+    tr td #statut {
+        padding: 4px;
+        font-size: 10px;
+    }
+    .quezes_admin td button {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+    .dashboard ul {
+        line-height: 3;
+    }
+    .container_ajouterQuiz {
+        font-size: 60%;
+        width: 100%;
+    }
+}
 
 @media screen and (max-width:776px) {
     header {
@@ -592,10 +648,11 @@ tr td #statut option[value="actif"] {
         flex-grow: 1;
     }
     .dashboard h1 {
-        font-size: 1em;
+        font-size: 0.8em;
+        padding-left: 10%
     }
     .dashboard ul li {
-        font-size: 0.7em;  
+        font-size: 0.6em;  
     }
     .dashboard ul {
         line-height: 2.2;
@@ -609,6 +666,9 @@ tr td #statut option[value="actif"] {
         width: 100%;
         
     }
+    .dashboard ul {
+        line-height: 4;
+    }
 
     .btns_repeterquiz_nouveauQuiz .btnrepeatQuiz,
 .btns_repeterquiz_nouveauQuiz .btnNouveauQuiz {
@@ -616,5 +676,38 @@ tr td #statut option[value="actif"] {
     font-weight: 400;
     width: 100%;
 }
+.quezes_admin th, .quezes_admin td {
+    padding: 3px;
+    font-size: 6px;
+}
+tr td #statut {
+    padding: 1px;
+    font-size: 6px;
+}
+.quezes_admin td button {
+    padding: 4px 3px;
+    font-size: 5px;
+}
+.quiz-section select{
+    font-size: 10px;
+}
 
+.question-section .question select{
+    font-size: 10px;
+}
+}
+
+@media screen and (max-width:424px){
+    .main_admin {
+        gap: 5%;
+    }
+    .dashboard h1 {
+        font-size: 0.6em;
+    }
+    .dashboard ul li {
+        font-size: 0.4em;
+    }
+    .titleListeQuiz h1 {
+        font-size: 17px;
+    }
 }

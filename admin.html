@@ -31,8 +31,9 @@
             <ul class="dashboard-menu">
                 <li class="menu-item">Statistique</li>
                 <li class="menu-item">View Cards</li>
-                <li class="menu-item ajouterQuiz">Ajouter Quiz</li>
-                <li class="menu-item ajouterQustion">Ajouter Question</li>
+               <li class="menu-item ajouterQuiz">Ajouter Quiz</li>
+               <!-- pourquoi la ligne au dessous ne focntionne pas le lien -->
+               <li class="menu-item ajouterQustion">Ajouter Question</li>
             </ul>
             <div class="dashboard-sections">
                 <!-- Contenu spécifique aux sections -->
@@ -42,6 +43,8 @@
         <div class="sections_page">
 
                 <div class="quezes_admin">
+                    <!-- cette partie n est pas responsive essayer de trouver une mailleur solution pour 
+                    tranformer ce code responsive  -->
                     <div class="titleListeQuiz">
                         <h1>Liste des Quiz Disponibles</h1>
                     </div>
@@ -51,7 +54,7 @@
                             <th>title</th>
                             <th>categorie</th>
                             <th>tempsEstime</th>
-                            <th>NbrQuestions:</th>
+                            <th>NbrQts:</th>
                             <th>Niveau</th>
                             <th>statut</th>
                             <th>Modifier</th>
@@ -74,11 +77,8 @@
                     </table>
                 </div>
 
-            <div class="container_ajouterQuiz">
+            <div class="container_ajouterQuiz" id="partieQuiz">
                 <form class="quiz-form">
-                    <div class="quiz_li">
-                    </div>
-                    
                     <!-- Section principale du quiz -->
                     <div class="quiz-section">
                         <h1>Ajouter un Nouveau Quiz</h1>
@@ -143,14 +143,14 @@
                                     <input type="radio" id="false" name="correctAnswer" value="1">
                                     <label for="false">Faux</label>
                                 </div>
-                                <label for="correct-index">Indice de la Réponse Correcte</label>
-                                <input type="number" id="correct-index" name="correct-index" min="0" max="1">
+                                <!-- <label for="correct-index">Indice de la Réponse Correcte</label>
+                                <input type="number" id="correct-index" name="correct-index" min="0" max="1"> -->
                                 <label for="explication">Explication</label>
                                 <textarea id="explication" name="explication"></textarea>
                                 <button type="submit" class="add-question ajouter_questionVF">Ajouter la Question</button>
                             </div>
 
-                            <div class="text-options">
+                            <div class="text-options" id="zoneOptionTexthhg">
                                 <label for="question-text">Question :(type:text)</label>
                                 <input type="text" id="question-text" name="question-text">
                                 <label>Réponses</label>
@@ -166,9 +166,9 @@
 
                 </form>
             </div>
-
+            <div class="ModifierQuiz" id="EspaceModifierquiz">
+            </div>
         </div>
-
     </main>
 
 </body>

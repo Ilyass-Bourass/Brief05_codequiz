@@ -52,7 +52,7 @@ const quizeSData=[
                 "id": 2,
                 "type": "boolean",
                 "question": "JavaScript est un langage compilé.",
-                "options": ["vrai", "faux"],
+                "options":  ["vrai","faux"],
                 "correctAnswer": 1,
                 "explication": "Explication : JavaScript n'est pas un langage compilé."
             },
